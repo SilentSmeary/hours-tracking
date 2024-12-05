@@ -12,7 +12,8 @@
 <body>
 <ul class="navbar_main">
     <li class="navbar_li"><a class="active" href="index.html">Home</a></li>
-    <li class="navbar_li"><a href="contact.html">Contact</a></li> <li class="navbar_li" style="float:right"><a class="active" href="sign_in.html">Login In</a></li>
+    <li class="navbar_li"><a href="contact.html">Contact</a></li> 
+    <li class="navbar_li" style="float:right"><a class="active" href="sign_in.html">Login</a></li>
 </ul>
 
 <div id="container">
@@ -35,8 +36,6 @@
         <a id="join_now2" href="school_sign_up.html">School Sign Up</a>
     </div>
     <img id="content_image" src="assets/home_page_image.png" alt="">
-
-
 </div>
 </body>
 </html>
