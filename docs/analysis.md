@@ -9,7 +9,7 @@
 ## Legalities
 
 ### Applicable Laws and Regulations
-1. **General Data Protection Regulation (GDPR)**: Protecting personal data of students and staff and anything realted to the school
+1. **General Data Protection Regulation (GDPR)**: Protecting personal data of students and staff and anything realted to the school. 
 2. **Equality Act 2010**: Ensuring accessibility for all users, including those with disabilities.
 3. **Data Protection Act 2018**: Governing secure storage and use of personal information.
 
