@@ -41,7 +41,7 @@ echo "<br><br>";
 // Display each log in a card
 if ($result && is_array($result)) {
     foreach ($result as $row) {
-        echo "<div class='card' style='border: 1px solid #ccc; padding: 10px; margin: 10px; width: 900px;'>";
+        echo "<div class='card' style='border: 1px solid #ccc; padding-left: 10px; margin: 10px; width: 900px;'>";
             echo "<h3>Date: " . htmlspecialchars($row['date']) . "</h3>";
             echo "<p><strong>Log:</strong> " . htmlspecialchars($row['log']) . "</p>";
             echo "<p><strong>Hours Completed:</strong> " . htmlspecialchars($row['hours_completed']) . "</p>";

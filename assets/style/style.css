@@ -6,3 +6,76 @@
 *{
     font-family: Poppins-Regular;
 }
+
+.home{
+    background: #25283D;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    color: white;
+}
+
+.firstname{
+    padding: 10px;
+    background: transparent;
+    border: solid #D81159;
+    border-radius: 10px;
+    width: 310px;
+    color: white;
+    font-size: 16px;
+}
+
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-color: transparent;
+    border: solid #D81159;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+}
+
+select::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+select:focus {
+    border-color: #D81159;
+}
+
+select option {
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.submit{
+    cursor: pointer;
+    font-family: Poppins-Regular;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 10px;
+    background: transparent;
+    border: #D81159 solid;
+    color: white;
+}
+
+.confirm_tc{
+    cursor: pointer;
+}

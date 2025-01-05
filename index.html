@@ -3,36 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/style.css">
     <title>Hours Tracking</title>
 </head>
-<body class="login">
-    <h1>Hours Tracking Login</h1>
+<body class="home">
+<div class="container">
+    <h1 class="title">Hours Tracking Login</h1>
     <form action="index.php" method="post">
-        <table class="homepage_table">
-            <tr>
-                <th><label for="email">Email: *</label></th>
-                <td><input class="firstname " type="text" id="email" name="email" required></td>
-            </tr>
-            <tr>
-                <th><label for="password">Password: *</label></th>
-                <td><input class="firstname " type="password" id="password" name="password" required></td>
-            </tr>
-            <tr>
-                <th><label for="role">Choose your role:</label></th>
-                <td><select id="role" name="role">
-                    <option value="student">Student</option>
-                    <option value="teacher">Teacher</option>
-                    <option value="school_admin">School Admin</option>
-                    <option value="trust_admin">Trust Admin</option>
-                    <option value="business_mentor">Business Mentor</option>
-                    <option value="business_admin">Business Admin</option>
-                </select></td>
-            </tr>
-            <tr>
-                <th><input type="submit" value="Submit"></th>
-            </tr>
-        </table>
+        <label for="email">Email: *</label><br>
+        <input class="firstname" type="text" id="email" name="email" required>
+        <br><br>
+        <label for="password">Password: *</label><br>
+        <input class="firstname" type="password" id="password" name="password" required>
+        <br><br>
+        <label for="role">Choose your role:</label><br>
+        <select id="role" name="role">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="school_admin">School Admin</option>
+            <option value="trust_admin">Trust Admin</option>
+            <option value="business_mentor">Business Mentor</option>
+            <option value="business_admin">Business Admin</option>
+        </select>
+        <br><br>
+        <input class="confirm_tc" name="confirm_tc" type="checkbox" required>
+        <label for="confirm_tc" >I have read and agree to the terms</label>
+        <br><br>
+        <input class="submit" type="submit" value="Log In">
     </form>
+</div>
 </body>
 </html>
