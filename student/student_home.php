@@ -3,9 +3,16 @@ session_start();
 include "../server/db_connect.php";
 
 echo "<link rel='stylesheet' type='text/css' href='../assets/style/style.css'>";
+echo "<body class='student_home_body'>";
+
+// Check if session data exists
+if (!isset($_SESSION["s_first_name"], $_SESSION["course_name"], $_SESSION["course_hours"], $_SESSION["s_student_id"])) {
+    echo "<p>Session data is incomplete. Please log in again.</p>";
+    exit;
+}
 
 // Display welcome message and course details
-echo "<p>👋🏼 Welcome " . htmlspecialchars($_SESSION["s_first_name"]) . "</p>";
+echo "<h2>👋🏼 Welcome back, " . htmlspecialchars($_SESSION["s_first_name"]) . "</h2>";
 echo "<b>" . htmlspecialchars($_SESSION["course_name"]) . "</b> with <b>" . htmlspecialchars($_SESSION["course_hours"]) . " </b> hours to complete!";
 echo "<hr>";
 
@@ -35,20 +42,51 @@ $remainingHours = $_SESSION["course_hours"] - $totalHoursWorked;
 echo "<p>Hours left to Complete: <b>" . htmlspecialchars($remainingHours) . "</b></p>";
 
 // Button for creating a new log entry
-echo "<button><a href='create_log.php'>Create an Entry</a></button>";
-echo "<br><br>";
+echo "<button class='create_log'><a class='create_log_a' href='create_log.php'>Create an Entry</a></button>";
+echo "<button class='create_log'><a class='create_log_a' href=''>Generate a Report</a></button>";
+echo "<br>";
 
-// Display each log in a card
+// Display logs as a table
 if ($result && is_array($result)) {
+    echo "<table class='logs-table'>";
+    echo "<thead>";
+    echo "<tr>";
+    echo "<th>Date</th>";
+    echo "<th>Log</th>";
+    echo "<th>Hours Completed</th>";
+    echo "<th>Verified</th>";
+    echo "<th>Actions</th>";  // Added a column for actions
+    echo "</tr>";
+    echo "</thead>";
+    echo "<tbody>";
+
     foreach ($result as $row) {
-        echo "<div class='card' style='border: 1px solid #ccc; padding-left: 10px; margin: 10px; width: 900px;'>";
-            echo "<h3>Date: " . htmlspecialchars($row['date']) . "</h3>";
-            echo "<p><strong>Log:</strong> " . htmlspecialchars($row['log']) . "</p>";
-            echo "<p><strong>Hours Completed:</strong> " . htmlspecialchars($row['hours_completed']) . "</p>";
-            echo "<p><strong>Verified:</strong> " . htmlspecialchars($row['verified']) . "</p>";
-        echo "</div>";
+        // Format the date to include the day abbreviation and full date
+        $formattedDate = (new DateTime($row['date']))->format('D F j Y'); // Output: Mon, January 5, 2025
+        echo "<tr>";
+        echo "<td class='date-column'>" . htmlspecialchars($formattedDate) . "</td>";
+        echo "<td>" . htmlspecialchars($row['log']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['hours_completed']) . " Hours</td>";
+        echo "<td>" . htmlspecialchars($row['verified']) . "</td>";
+
+        // Edit and Delete links with hours_id
+        echo "<td class='hours-column'>";
+
+        // Edit link - Redirects to an edit page with hours_id
+        echo "<button class='create_log'><a class='create_log_a' href='edit_log.php?hours_id=" . htmlspecialchars($row['hours_id']) . "' class='edit-btn'>Edit</a></button>";
+
+        // Delete link - Redirects to a delete page with hours_id
+        echo "<button class='create_log'><a class='create_log_a' href='delete_log.php?hours_id=" . htmlspecialchars($row['hours_id']) . "' class='delete-btn' onclick='return confirm(\"Are you sure you want to delete this log entry?\");'>Delete</a></button>";
+
+        echo "</td>";
+        echo "</tr>";
     }
+
+    echo "</tbody>";
+    echo "</table>";
 } else {
     echo "<p>No results found.</p>";
 }
+
+echo "</body>";
 ?>
