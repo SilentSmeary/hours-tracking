@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <title>Hours Tracking</title>
+</head>
+<body class="login">
+    <h1>Hours Tracking Login</h1>
+
+    <form action="index.php" method="post">
+        <table class="homepage_table">
+            <tr>
+                <th><label for="email">Email: *</label></th>
+                <td><input class="firstname " type="text" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <th><label for="password">Password: *</label></th>
+                <td><input class="firstname " type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <th><label for="role">Choose your role:</label></th>
+                <td><select id="role" name="role">
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="school_admin">School Admin</option>
+                    <option value="trust_admin">Trust Admin</option>
+                    <option value="business_mentor">Business Mentor</option>
+                    <option value="business_admin">Business Admin</option>
+                </select></td>
+            </tr>
+            <tr>
+                <th><input type="submit" value="Submit"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
