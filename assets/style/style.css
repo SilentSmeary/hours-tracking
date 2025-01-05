@@ -42,6 +42,7 @@ select {
     width: 100%;
     cursor: pointer;
     outline: none;
+    font-family: Poppins-Regular;
 }
 
 select::after {
@@ -58,10 +59,11 @@ select:focus {
 }
 
 select option {
+    font-family: Poppins-Regular;
     background-color: white;
     color: #333;
     font-size: 16px;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 .submit{
@@ -71,11 +73,81 @@ select option {
     font-size: 16px;
     width: 100%;
     border-radius: 10px;
-    background: transparent;
+    background: rgba(216, 17, 89, 0.50);
     border: #D81159 solid;
     color: white;
+
 }
 
 .confirm_tc{
     cursor: pointer;
+}
+
+.student_home_body{
+    background: #25283D;
+    color: white;
+}
+
+.create_log{
+    background: rgba(216, 17, 89, 0.50);
+    padding: 10px;
+    border: solid #D81159;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.create_log_a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* General Table Styles */
+.logs-table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Remove gaps between table borders */
+    margin: 20px 0; /* Add some space around the table */
+    font-size: 16px; /* Font size for text inside the table */
+    text-align: left; /* Align text to the left */
+}
+
+/* Header Styling */
+.logs-table th {
+    background-color: #161824; /* Light grey background */
+    color: #white; /* Darker text for better contrast */
+    font-weight: bold; /* Make the text bold */
+    padding: 12px 15px; /* Add padding for better spacing */
+    /*border: 1px solid #ddd; !* Add borders *!*/
+}
+
+/* Row Styling */
+.logs-table td {
+    padding: 10px 15px; /* Add padding for better spacing */
+    /*border: 1px solid #ddd; !* Add borders *!*/
+}
+
+
+/* Hover Effect */
+.logs-table tr:hover {
+    background-color: rgba(241, 241, 241, 0.25); /* Slightly darker grey for hover */
+}
+
+/* Responsive Table */
+@media screen and (max-width: 768px) {
+    .logs-table {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+    .logs-table th, .logs-table td {
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+.logs-table th.date-column,
+.logs-table td.date-column {
+    width: 190px; /* Lock the width of the Date column */
+}
+
+.logs-table th.date-column,
+.logs-table td.hours-column {
+    width: 160px; /* Lock the width of the Date column */
 }
