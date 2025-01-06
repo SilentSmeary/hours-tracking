@@ -1,30 +1,33 @@
 @font-face {
-    font-family: Poppins-Regular;
-    src: url(../fonts/Poppins-Regular.otf);
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
 }
 
 *{
-    font-family: Poppins-Regular, serif;
+    font-family: Roboto;
 }
 
 .home{
-    background: #25283D;
+    background: #ffffff;
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;    /* Centers vertically */
-    color: white;
+    color: #0b0c0c;
 }
 
 .firstname{
     padding: 10px;
     background: transparent;
-    border: solid #D81159;
-    border-radius: 10px;
-    width: 310px;
-    color: white;
+    border: solid #0b0c0c;
+    width: 400px;
+    color: #0b0c0c;
     font-size: 16px;
+}
+
+.firstname:focus {
+    outline: 3px solid #ffdd00; /* Add yellow outline when focused */
 }
 
 
@@ -34,15 +37,14 @@ select {
     -moz-appearance: none;
 
     background-color: transparent;
-    border: solid #D81159;
-    border-radius: 8px;
+    border: solid #0b0c0c;
     padding: 10px;
     font-size: 16px;
-    color: white;
+    color: #0b0c0c;
     width: 100%;
     cursor: pointer;
     outline: none;
-    font-family: Poppins-Regular;
+    font-family: Roboto;
 }
 
 select::after {
@@ -55,11 +57,12 @@ select::after {
 }
 
 select:focus {
-    border-color: #D81159;
+    border-color: #0b0c0c;
+    outline: 3px solid #ffdd00; /* Add yellow outline when focused */
 }
 
 select option {
-    font-family: Poppins-Regular;
+    font-family: Roboto;
     background-color: white;
     color: #333;
     font-size: 16px;
@@ -68,15 +71,17 @@ select option {
 
 .submit{
     cursor: pointer;
-    font-family: Poppins-Regular;
+    font-family: Roboto;
     padding: 10px;
     font-size: 16px;
     width: 100%;
-    border-radius: 10px;
-    background: rgba(216, 17, 89, 0.50);
-    border: #D81159 solid;
+    background: #00703c;
+    border: #00703c solid;
     color: white;
+}
 
+.submit:hover {
+    background-color: #004a27; /* Darker green on hover */
 }
 
 .confirm_tc{
@@ -89,19 +94,22 @@ select option {
 }
 
 .create_log{
-    background: rgba(216, 17, 89, 0.50);
+    background: #00703c;
     padding: 10px;
-    border: solid #D81159;
-    border-radius: 10px;
+    border: solid #00703c;
     margin-right: 10px;
-    font-family: Poppins-Regular;
+    font-family: Roboto;
+}
+
+.create_log:hover {
+    background-color: #004a27; /* Darker green on hover */
 }
 
 .create_log_a{
     text-decoration: none;
     color: white;
     font-size: 16px;
-    font-family: Poppins-Regular;
+    font-family: Roboto;
 }
 
 /* General Table Styles */
@@ -155,12 +163,20 @@ select option {
 }
 
 .contact_support{
-    font-family: Poppins-Regular;
+    font-family: Roboto;
     padding: 10px;
     font-size: 16px;
     width: 100%;
-    border-radius: 10px;
-    background: rgba(216, 17, 89, 0.50);
-    border: #D81159 solid;
+    background: #00703c;
+    border: solid #00703c;
     color: white;
+
+}
+
+.contact_support:hover {
+    background-color: #004a27; /* Darker green on hover */
+}
+
+label{
+    font-size: 18px;
 }
