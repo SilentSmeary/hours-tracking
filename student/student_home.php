@@ -52,7 +52,7 @@ if ($result && is_array($result)) {
     echo "<thead>";
     echo "<tr>";
     echo "<th>Date</th>";
-    echo "<th>Log</th>";
+    echo "<th>Log Book</th>";
     echo "<th>Hours Completed</th>";
     echo "<th>Verified</th>";
     echo "<th>Actions</th>";  // Added a column for actions

@@ -94,12 +94,14 @@ select option {
     border: solid #D81159;
     border-radius: 10px;
     margin-right: 10px;
+    font-family: Poppins-Regular;
 }
 
 .create_log_a{
     text-decoration: none;
     color: white;
     font-size: 16px;
+    font-family: Poppins-Regular;
 }
 
 /* General Table Styles */
