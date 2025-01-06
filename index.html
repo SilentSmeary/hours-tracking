@@ -16,8 +16,8 @@
         <label for="password">Password: *</label><br>
         <input class="firstname" type="password" id="password" name="password" required>
         <br><br>
-        <label for="role">Choose your role:</label><br>
-        <select id="role" name="role">
+        <label for="role">Choose your role: *</label><br>
+        <select id="role" name="role" required>
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
             <option value="school_admin">School Admin</option>
@@ -26,11 +26,13 @@
             <option value="business_admin">Business Admin</option>
         </select>
         <br><br>
-        <input class="confirm_tc" name="confirm_tc" type="checkbox" required>
+        <input class="confirm_tc" id="confirm_tc" type="checkbox" required>
         <label for="confirm_tc" >I have read and agree to the terms</label>
         <br><br>
         <input class="submit" type="submit" value="Log In">
     </form>
+    <br>
+    <button class='contact_support'><a class='create_log_a' href=''>Contact Support</a></button>
 </div>
 </body>
 </html>

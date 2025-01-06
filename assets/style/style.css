@@ -4,7 +4,7 @@
 }
 
 *{
-    font-family: Poppins-Regular;
+    font-family: Poppins-Regular, serif;
 }
 
 .home{
@@ -116,7 +116,7 @@ select option {
 /* Header Styling */
 .logs-table th {
     background-color: #161824; /* Light grey background */
-    color: #white; /* Darker text for better contrast */
+    color: white; /* Darker text for better contrast */
     font-weight: bold; /* Make the text bold */
     padding: 12px 15px; /* Add padding for better spacing */
     /*border: 1px solid #ddd; !* Add borders *!*/
@@ -152,4 +152,15 @@ select option {
 .logs-table th.date-column,
 .logs-table td.hours-column {
     width: 160px; /* Lock the width of the Date column */
+}
+
+.contact_support{
+    font-family: Poppins-Regular;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(216, 17, 89, 0.50);
+    border: #D81159 solid;
+    color: white;
 }

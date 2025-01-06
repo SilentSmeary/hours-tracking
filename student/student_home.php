@@ -43,7 +43,6 @@ echo "<p>Hours left to Complete: <b>" . htmlspecialchars($remainingHours) . "</b
 
 // Button for creating a new log entry
 echo "<button class='create_log'><a class='create_log_a' href='create_log.php'>Create an Entry</a></button>";
-echo "<button class='create_log'><a class='create_log_a' href=''>Generate a Report</a></button>";
 echo "<br>";
 
 // Display logs as a table
@@ -61,23 +60,15 @@ if ($result && is_array($result)) {
     echo "<tbody>";
 
     foreach ($result as $row) {
-        // Format the date to include the day abbreviation and full date
-        $formattedDate = (new DateTime($row['date']))->format('D F j Y'); // Output: Mon, January 5, 2025
+        $formattedDate = (new DateTime($row['date']))->format('D F j Y');
         echo "<tr>";
         echo "<td class='date-column'>" . htmlspecialchars($formattedDate) . "</td>";
         echo "<td>" . htmlspecialchars($row['log']) . "</td>";
         echo "<td>" . htmlspecialchars($row['hours_completed']) . " Hours</td>";
         echo "<td>" . htmlspecialchars($row['verified']) . "</td>";
-
-        // Edit and Delete links with hours_id
         echo "<td class='hours-column'>";
-
-        // Edit link - Redirects to an edit page with hours_id
         echo "<button class='create_log'><a class='create_log_a' href='edit_log.php?hours_id=" . htmlspecialchars($row['hours_id']) . "' class='edit-btn'>Edit</a></button>";
-
-        // Delete link - Redirects to a delete page with hours_id
         echo "<button class='create_log'><a class='create_log_a' href='delete_log.php?hours_id=" . htmlspecialchars($row['hours_id']) . "' class='delete-btn' onclick='return confirm(\"Are you sure you want to delete this log entry?\");'>Delete</a></button>";
-
         echo "</td>";
         echo "</tr>";
     }
@@ -89,4 +80,3 @@ if ($result && is_array($result)) {
 }
 
 echo "</body>";
-?>
