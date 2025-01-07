@@ -91,8 +91,8 @@ select option {
 .student_home_body{
     background: #ffffff;
     color: #0b0b0c;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 .create_log{
@@ -102,6 +102,14 @@ select option {
     margin-right: 10px;
     font-family: Roboto;
 }
+
+.create_log2{
+    background: #00703c;
+    padding: 10px;
+    border: solid #00703c;
+    font-family: Roboto;
+}
+
 
 .create_log:hover {
     background-color: #004a27; /* Darker green on hover */
@@ -161,7 +169,12 @@ select option {
 
 .logs-table th.date-column,
 .logs-table td.hours-column {
-    width: 160px; /* Lock the width of the Date column */
+    width: 190px; /* Lock the width of the Date column */
+}
+
+.logs-table th.date-column,
+.logs-table td.log-column {
+    width: 1450px; /* Lock the width of the Date column */
 }
 
 .contact_support{
@@ -221,3 +234,7 @@ select option {
   li a.active {
     color: #0056b3; /* Optional: Change text color on hover and active */
   }
+
+b{
+    font-weight: bolder;
+}
