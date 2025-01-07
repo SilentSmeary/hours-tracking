@@ -35,7 +35,7 @@ CREATE TABLE `audit` (
   `id` int NOT NULL,
   `action` text NOT NULL,
   `date_time` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `audit`
