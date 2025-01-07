@@ -11,8 +11,13 @@ if (!isset($_SESSION["s_first_name"], $_SESSION["course_name"], $_SESSION["cours
     exit;
 }
 
+echo "<ul class='nav_bar'>";
+echo "<li class='navbar_li'><a href='#get-started'>Get started</a></li>";
+echo "<li class='navbar_li'><a href='#get-started'>Get started</a></li>";
+echo "</ul>";
+
 // Display welcome message and course details
-echo "<h2>👋🏼 Welcome back, " . htmlspecialchars($_SESSION["s_first_name"]) . "</h2>";
+echo "<h1>👋🏼 Welcome back, " . htmlspecialchars($_SESSION["s_first_name"]) . "</h1>";
 echo "<b>" . htmlspecialchars($_SESSION["course_name"]) . "</b> with <b>" . htmlspecialchars($_SESSION["course_hours"]) . " </b> hours to complete!";
 echo "<hr>";
 
