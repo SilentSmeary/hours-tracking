@@ -67,13 +67,13 @@ if ($result && is_array($result)) {
     foreach ($result as $row) {
         $formattedDate = (new DateTime($row['date']))->format('D F j Y');
         echo "<tr>";
-        echo "<td class='date-column'>" . htmlspecialchars($formattedDate) . "</td>";
-        echo "<td>" . htmlspecialchars($row['log']) . "</td>";
+        echo "<td class='date-column'><b>" . htmlspecialchars($formattedDate) . "</b></td>";
+        echo "<td class='log-column'>" . htmlspecialchars($row['log']) . "</td>";
         echo "<td>" . htmlspecialchars($row['hours_completed']) . " Hours</td>";
         echo "<td>" . htmlspecialchars($row['verified']) . "</td>";
         echo "<td class='hours-column'>";
         echo "<button class='create_log'><a class='create_log_a' href='edit_log.php?hours_id=" . htmlspecialchars($row['hours_id']) . "' class='edit-btn'>Edit</a></button>";
-        echo "<button class='create_log'><a class='create_log_a' href='delete_log.php?hours_id=" . htmlspecialchars($row['hours_id']) . "' class='delete-btn' onclick='return confirm(\"Are you sure you want to delete this log entry?\");'>Delete</a></button>";
+        echo "<button class='create_log2'><a class='create_log_a' href='delete_log.php?hours_id=" . htmlspecialchars($row['hours_id']) . "' class='delete-btn' onclick='return confirm(\"Are you sure you want to delete this log entry?\");'>Delete</a></button>";
         echo "</td>";
         echo "</tr>";
     }
