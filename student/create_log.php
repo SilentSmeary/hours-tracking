@@ -1,8 +1,37 @@
 <?php
 session_start();
 
+echo "<link rel='stylesheet' type='text/css' href='../assets/style/style.css'>";
+echo "<body class='student_home_body'>";
+
+// Check if session data exists
+if (!isset($_SESSION["s_first_name"], $_SESSION["course_name"], $_SESSION["course_hours"], $_SESSION["s_student_id"])) {
+    echo "<p>Session data is incomplete. Please log in again.</p>";
+    exit;
+}
+
+echo "<ul class='nav_bar'>";
+echo "<li class='navbar_li'><a href='#get-started'>Get started</a></li>";
+echo "<li class='navbar_li'><a href='#get-started'>Get started</a></li>";
+echo "</ul>";
+
+echo "<h1></h1>";
+
 echo "<form method='post' action='insert_log.php'>";
-    echo "<input type='date' name='date' placeholder='Date' required><br>";
+//    echo "<input type='date' name='date' placeholder='Date' required><br>";
+echo'<div class="date-inputs">';
+    echo'<div class="input-group">';
+        echo'<label for="day">Day</label>';
+        echo'<input type="text" id="day" name="day" maxlength="2" placeholder="DD" required>';
+    echo'</div>';
+    echo'<div class="input-group">';
+        echo'<label for="month">Month</label>';
+        echo'<input type="text" id="month" name="month" maxlength="2" placeholder="MM" required>';
+    echo'</div>';
+    echo'<div class="input-group">';
+        echo'<label for="year">Year</label>';
+        echo'<input type="text" id="year" name="year" maxlength="4" placeholder="YYYY" required>';
+    echo'</div>';
     echo "<textarea name='log' id='' placeholder='Enter your logbook for the day'></textarea><br>";
     echo "<input type='text' name='hours' placeholder='Hours for the day' required><br>";
     echo "<input type='submit' name='submit' value='Submit'>";
