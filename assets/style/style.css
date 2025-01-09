@@ -238,3 +238,31 @@ select option {
 b{
     font-weight: bolder;
 }
+
+.form_heading{
+    font-size: 48px;
+}
+
+.form_element_heading{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0px;
+    gap: 8px; /* Adjust gap between elements if needed */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px; /* Adjust gap between elements if needed */
+}
+
+.text-element {
+    font-size: 16px; /* Adjust font size */
+    color: #000; /* Adjust text color */
+}
+
+.text-element-faded {
+    font-size: 16px; /* Adjust font size */
+    color: rgba(0, 0, 0, 0.5); /* Adjust text color */
+}
