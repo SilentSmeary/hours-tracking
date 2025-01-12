@@ -115,6 +115,9 @@ select option {
     background-color: #004a27; /* Darker green on hover */
 }
 
+.create_log2:hover {
+    background-color: #004a27; /* Darker green on hover */
+}
 .create_log_a{
     text-decoration: none;
     color: white;

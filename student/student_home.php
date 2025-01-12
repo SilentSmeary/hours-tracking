@@ -81,7 +81,8 @@ if ($result && is_array($result)) {
     echo "</tbody>";
     echo "</table>";
 } else {
-    echo "<p>No results found.</p>";
+    echo "<p>You have no data recorded in the system.</p>";
+    echo "<p>Create a log first then try again!</p>";
 }
 
 echo "</body>";
