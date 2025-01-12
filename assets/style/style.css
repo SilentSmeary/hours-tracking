@@ -243,26 +243,90 @@ b{
     font-size: 48px;
 }
 
-.form_element_heading{
-    font-weight: bold;
-    font-size: 20px;
-    padding: 0px;
-    gap: 8px; /* Adjust gap between elements if needed */
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px; /* Adjust gap between elements if needed */
-}
-
 .text-element {
-    font-size: 16px; /* Adjust font size */
+    font-size: 20px; /* Adjust font size */
     color: #000; /* Adjust text color */
+    font-weight: bold;
+    padding-bottom: 5px;
 }
 
 .text-element-faded {
-    font-size: 16px; /* Adjust font size */
+    font-size: 20px; /* Adjust font size */
     color: rgba(0, 0, 0, 0.5); /* Adjust text color */
+    padding-bottom: 5px;
+}
+
+.date-container {
+    display: flex;
+    gap: 20px; /* Space between the boxes */
+    align-items: center;
+    font-size: 20px;
+}
+
+.date-container-input {
+    display: block;
+    margin: 5px auto 0;
+    width: 50px;
+    /*height: 30px;*/
+    padding: 10px;
+    border: solid #000;
+    font-size: 20px;
+}
+
+.date-container-input:focus {
+    border-color: #0b0c0c;
+    outline: 3px solid #ffdd00; /* Add yellow outline when focused */
+}
+
+.date-item-year {
+    display: block;
+    margin: 5px auto 0;
+    width: 75px;
+    /*height: 30px;*/
+    padding: 10px;
+    border: solid #000;
+    font-size: 20px;
+}
+
+.date-item-year:focus {
+    border-color: #0b0c0c;
+    outline: 3px solid #ffdd00; /* Add yellow outline when focused */
+}
+
+.log_textarea {
+    padding: 10px;
+    width: 650px;
+    height: 150px;
+    font-size: 20px;
+    font-family: Roboto;
+    border: solid #000;
+}
+
+.log_textarea:focus {
+    border-color: #0b0c0c;
+    outline: 3px solid #ffdd00; /* Add yellow outline when focused */
+}
+
+.log_hours{
+    padding: 10px;
+    font-size: 20px;
+    width: 50px;
+    border: solid #000;
+}
+
+.log_hours:focus {
+    border-color: #0b0c0c;
+    outline: 3px solid #ffdd00; /* Add yellow outline when focused */
+}
+
+.submit{
+    cursor: pointer;
+    font-family: Roboto;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 200px;
+    background: #00703c;
+    border: #00703c solid;
+    color: white;
 }
