@@ -70,6 +70,7 @@ select option {
 }
 
 .submit{
+    font-weight: bold;
     cursor: pointer;
     font-family: Roboto;
     padding: 10px;
@@ -119,6 +120,7 @@ select option {
     background-color: #004a27; /* Darker green on hover */
 }
 .create_log_a{
+    font-weight: bold;
     text-decoration: none;
     color: white;
     font-size: 16px;
@@ -181,6 +183,7 @@ select option {
 }
 
 .contact_support{
+    font-weight: bold;
     font-family: Roboto;
     padding: 10px;
     font-size: 16px;
@@ -200,44 +203,50 @@ select option {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     display: flex;
-  }
+    justify-content: space-between; /* Changed to space-between to push items apart */
+    align-items: center;
+    padding: 0 16px;
+}
 
-  .navbar_li {
-    float: left;
-  }
+.nav_left, .nav_right {
+    display: flex;
+    align-items: center;
+}
 
-  li:last-child {
-    border-right: none;
-  }
+.navbar_li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
 
-  li a {
+.navbar_li a {
     display: block;
     color: #1d70b8;
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px 20px;
     text-decoration: none;
-    position: relative; /* Required for positioning the ::after element */
-  }
+    position: relative;
+    font-family: roboto;
+    font-size: 16px;
+}
 
-  /* Add underline on hover and active state */
-  li a:hover::after,
-  li a.active::after {
+.navbar_li a:hover::after,
+.navbar_li a.active::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0; /* Aligns underline at the bottom of the link */
-    height: 2px;
-    background-color: #007bff; /* Blue underline */
-  }
+    bottom: 0;
+    height: 4px;
+    background-color: #1d70b8;
+}
 
-  li a:hover,
-  li a.active {
-    color: #0056b3; /* Optional: Change text color on hover and active */
-  }
-
+.navbar_li a:hover,
+.navbar_li a.active {
+    color: #003078;
+    background: #f3f2f1;
+}
 b{
     font-weight: bolder;
 }
@@ -322,7 +331,7 @@ b{
     outline: 3px solid #ffdd00; /* Add yellow outline when focused */
 }
 
-.submit{
+.submit2{
     cursor: pointer;
     font-family: Roboto;
     padding: 10px;

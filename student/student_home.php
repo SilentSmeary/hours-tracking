@@ -11,10 +11,16 @@ if (!isset($_SESSION["s_first_name"], $_SESSION["course_name"], $_SESSION["cours
     exit;
 }
 
-echo "<ul class='nav_bar'>";
-echo "<li class='navbar_li'><a href='#get-started'>Get started</a></li>";
-echo "<li class='navbar_li'><a href='#get-started'>Get started</a></li>";
-echo "</ul>";
+echo '<nav>
+        <ul class="nav_bar">
+            <div class="nav_left">
+                <li class="navbar_li"><a href="student_home.php">Student Dashboard</a></li>
+            </div>
+            <div class="nav_right">
+                <li class="navbar_li"><a href="../logout.php">Logout</a></li>
+            </div>
+        </ul>
+    </nav>';
 
 // Display welcome message and course details
 echo "<h1>👋🏼 Welcome back, " . htmlspecialchars($_SESSION["s_first_name"]) . "</h1>";
@@ -44,7 +50,7 @@ if ($result && is_array($result)) {
 $remainingHours = $_SESSION["course_hours"] - $totalHoursWorked;
 
 // Display remaining hours
-echo "<p>Hours left to Complete: <b>" . htmlspecialchars($remainingHours) . "</b></p>";
+echo "<p>You have <b>" . htmlspecialchars($remainingHours) . "</b> left to complete</p>";
 
 // Button for creating a new log entry
 echo "<button class='create_log'><a class='create_log_a' href='create_log.php'>Create an Entry</a></button>";

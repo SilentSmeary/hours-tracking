@@ -10,10 +10,16 @@ if (!isset($_SESSION["s_first_name"], $_SESSION["course_name"], $_SESSION["cours
     exit;
 }
 
-echo "<ul class='nav_bar'>";
-    echo "<li class='navbar_li'><a href='student_home.php'>Student Home</a></li>";
-    echo "<li class='navbar_li'><a href='#about'>About</a></li>";
-echo "</ul>";
+echo '<nav>
+        <ul class="nav_bar">
+            <div class="nav_left">
+                <li class="navbar_li"><a href="student_home.php">Student Dashboard</a></li>
+            </div>
+            <div class="nav_right">
+                <li class="navbar_li"><a href="../logout.php">Logout</a></li>
+            </div>
+        </ul>
+    </nav>';
 
 echo "<h1 class='form_heading'>Create a Log</h1>";
 
@@ -45,7 +51,7 @@ echo "<form method='post' action='insert_log.php' class='log_form'>";
     echo "<div class='text-element-faded'>A number is required, the max is 8</div>";
     echo "<input type='text' name='hours' class='log_hours' required maxlength='1'>";
     echo "<br><br>";
-    echo "<input type='submit' name='submit' value='Submit' class='submit'>";
+    echo "<input type='submit' name='submit' value='Submit' class='submit2'>";
 echo "</form>";
 
 echo "</body>";
